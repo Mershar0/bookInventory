@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: #fff;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    font-size: 3rem;                        
+    font-weight: bold;                      
+    color: #1a1a1a;                         
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+    font-family: 'Georgia', serif;         
+  }
+  
+  
+  table {
+    margin: 0 auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+  }
+  
+  td, th {
+    text-align: center;         
+    vertical-align: middle;   
+    padding: 10px 15px;         
+  }
+  
+  tr th{
+    background-image: linear-gradient(#ff704d, #800000);
+  }
+  
+  tr[class="read"]{
+    background-image: linear-gradient(#bfff80, rgb(106, 219, 86), #bfff80);
+  }
+  
+  tr[class="to-read"]{
+    background-image: linear-gradient(#DB7093, #D8BFD8, #DB7093);
+  }
+  
+  tr[class="in-progress"]{
+    background-image: linear-gradient(#ffdd0071, rgb(234, 227, 100), #ffdd0071);
+  }
+  
+  span{
+    display: inline-block;
+  }
+  
+  span[class="status"]{
+    border: 2px solid white;
+    border-radius: 20px;
+    background-image: linear-gradient(white, pink);
+  }
+  
+  tr[class="read"] span[class="status"]{
+    background-image: linear-gradient(#bfff80);
+    border: 2px solid #9ffb42;
+  }
+  
+  tr[class="to-read"] span[class="status"]{
+    background-image: linear-gradient(#ffc0cb);
+    border: 2px solid #fd93a5;
+  }
+  
+  tr[class="in-progress"] span[class="status"]{
+    background-image: linear-gradient(#ffdd0071);
+    border: 2px solid #ffdd00fd;
+  }
+  
+  span[class="status"], span[class^="rate"]{
+    height: 20px;
+    width: 100px;
+    padding: 2px;
+  }
+  
+  span[class^="rate"] > span{
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 2px;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+  }
+  
+  span[class~="one"] :nth-child(1){
+    background-image: linear-gradient(#ff704d, #800000);
+  }
+  
+  span[class~="two"] :nth-child(1), span[class~="two"] :nth-child(2){
+    background-image: linear-gradient(#ff704d, #800000);
+  }
+  
+  span[class~="three"] > span {
+    background-image: linear-gradient(#ff704d, #800000);
+  }
+  
+  .status, .rate > span {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .status:hover, .rate > span:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  
+  @media screen and (max-width: 768px) {
+    table {
+      width: 100%;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
